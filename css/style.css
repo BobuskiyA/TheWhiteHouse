@@ -381,9 +381,83 @@
   height: 35px;
   width: 35px;
 }
+/************************** CONTACT FORM STYLING ***************************/
+.contact-form{
+  width: 750px;
+}
+.contact-form__form{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.contact-form__header{
+  background-color: rgb(22,100,216);
+  color: white;
+  text-align: center;
+}
+.contact-form__filds{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-form__fild{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0px 20px;
+}
+.contact-form__label{
+  flex-shrink: 0;
+}
+.contact-form__input{
+  border: black solid 3px;
+  width: 40vw;
+  min-width: none;
+  max-width: 400px;
+}
+.contact-form__input::placeholder{
+  font-size: 0.7em;
+  display: flex;
+  position: relative;
+  top: -0.1em;
+  left: 5px;
+}
 
+.contact-form__button{
+  background-color: rgb(22,100,216);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.contact-form__footer{
+  display: flex;
+  justify-content: end;
+  padding: 0px 20px;
+}
+.contact-form__message-success{
+  background-color: rgb(167, 243, 80);
+  color: rgb(43, 97, 1);
+  border: 2px rgb(43, 97, 1) solid;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+}
+.contact-form__message-error{
+  background-color: rgb(246, 113, 113);
+  color: rgb(81, 0, 0);
+  border: 2px rgb(81, 0, 0) solid;
+  width: 100%;
+  padding: 30px 0px;
+  text-align: center;
+}
 
-@media screen and (max-width: 800px) {
+/********************** MEDIA QUERIES *********************************/
+@media screen and (max-width:1024px) {
+  .contact-form{
+   width: 75vw;
+  }
+}
+@media screen and (max-width: 768px) {
   .first__title{
     font-size: 55px;
   }
@@ -420,18 +494,21 @@
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:426px) {
+  .contact-form{
+    width: 100vw;
+  }
   .first__title{
-    font-size: 30px;
+    font-size: 40px;
   }
   .block-title{
-    font-size: 20px;
+    font-size: 35px;
   }
   .text{
-    font-size: 10px;
+    font-size: 15px;
   }
   .whatsup__tip{
-    font-size: 5px;
+    font-size: 10px;
   
   }
 }
