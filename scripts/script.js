@@ -39,3 +39,17 @@ function formValidation(name, email, phone){
     }
     else $('#phoneValidatonError').addClass('hidden');
 }
+
+var visibility = false ;
+function toggleBurgerMenu(){
+    console.log(visibility)
+    if(!visibility) {
+        $('.burger-menu').removeClass('burger-menu--hidden');
+        visibility = !visibility;
+    }
+    else {
+        $('.burger-menu').addClass('burger-menu--hidden');
+        visibility = !visibility;
+    }
+    return true;
+}
