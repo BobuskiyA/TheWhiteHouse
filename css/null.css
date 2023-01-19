@@ -43,10 +43,9 @@
    }
    a {
     color: inherit;
+    text-decoration: none;
    }
-   li{
-    margin-left: 60px;
-   }
+   
    img {
     vertical-align: top;
     position: relative;
@@ -68,4 +67,7 @@
    }
    div{
     line-height: 1.4;
+   }
+   li{
+    list-style-type: none;
    }
