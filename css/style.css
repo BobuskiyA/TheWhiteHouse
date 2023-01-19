@@ -11,6 +11,83 @@
   
 }
 
+/******************************************* HEADER STYLING ****************************/
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  background-color: rgb(0, 73, 182);
+  width: 100vw;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+}
+.header__icon{
+  height: 60px;
+  width: auto;
+}
+.header__menu{
+}
+.menu__items{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.menu__item{
+}
+
+.menu__link:hover{
+  background-color: rgb(44, 128, 255);
+}
+
+.menu__link{
+  padding: 27px 25px;
+  display: block;
+}
+
+.right-pane__burger{
+  height: 30px;
+  width: 30px;
+  display: none;
+}
+
+.right-pane{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+/*********************** BURGER MENU STYLING *************************/
+.burger-menu--hidden{
+  display: none;
+}
+.burger-menu{
+  background-color: rgb(0, 73, 182);
+  font-size: 20px;
+  width: 100%;
+  color: white;
+  padding-top: 20px;
+  height: 100vh;
+}
+.burger-menu__items{
+  display: flex;
+  flex-direction: column;
+}
+.burger-menu__link{
+  display: block;
+  padding: 10px 30px;
+  text-align: center;
+}
+.burger-menu__item{
+  border: 1px solid white;
+}
+
+.burger-menu__item:hover{
+  background-color: rgb(44, 128, 255);
+}
+
 /*************************** FIRST PAGE STYLING  *******************************/
 .first__logo{
   width: 47%;
@@ -213,7 +290,9 @@
 }
 .stages__body{
 }
-
+.stages__stage{
+  list-style-type: disc;
+}
 /**************************** REVIEWS PAGE STYLING ***********************/
 .reviews-square{
   height: 4.3vw /**/;
@@ -389,11 +468,13 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 30px 0px;
 }
 .contact-form__header{
   background-color: rgb(22,100,216);
   color: white;
   text-align: center;
+  padding: 10px 0px;
 }
 .contact-form__filds{
   display: flex;
@@ -452,6 +533,15 @@
 }
 
 /********************** MEDIA QUERIES *********************************/
+@media screen and (max-width:1200px) {
+  .header{
+    font-size: 15px;
+  }
+  .menu__link{
+    padding: 27px 15px;
+  }
+}
+
 @media screen and (max-width:1024px) {
   .contact-form{
    width: 75vw;
@@ -476,6 +566,16 @@
   .stages__img{
     width: none;
   }
+  .header__menu{
+    display: none;
+  }
+  .right-pane__burger{
+    display: block;
+  }
+  .header{
+    padding: 10px 50px;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -509,6 +609,16 @@
   }
   .whatsup__tip{
     font-size: 10px;
-  
   }
+  .header{
+    padding: 5px 10px;
+  }
+  .header__icon{
+    height: 40px;
+    width: auto;
+  }
+  .right-pane__burger{
+   
+  }
+
 }
