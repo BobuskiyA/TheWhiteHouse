@@ -507,14 +507,11 @@
   align-items: center;
   padding: 0px 20px;
 }
-.contact-form__label{
-  flex-shrink: 0;
-}
+
 .contact-form__input{
-  border: black solid 3px;
-  width: 40vw;
-  min-width: none;
-  max-width: 400px;
+  font-size: 33px;
+  border-bottom: rgb(22,100,216) solid 3px;
+  width: 100%;
 }
 .contact-form__input::placeholder{
   font-size: 0.7em;
@@ -527,12 +524,13 @@
 .contact-form__button{
   background-color: rgb(22,100,216);
   color: white;
-  padding: 10px;
+  max-width: 300px;
+  padding: 15px 40px;
   border-radius: 5px;
 }
 .contact-form__footer{
   display: flex;
-  justify-content: end;
+  justify-content: center;
   padding: 0px 20px;
 }
 .contact-form__message-success{
@@ -581,6 +579,9 @@
   .stages__img{
     width: none;
   }
+}
+
+@media screen and (max-width: 991.97px) {
   .header__menu{
     display: none;
   }
@@ -593,6 +594,7 @@
   .burger-menu {
     padding-top: 50px;
   }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -644,4 +646,10 @@
   .img-reviews__img-chat1 {
     top: 0;
   }
+  .contact-form__input{
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+  
 }
