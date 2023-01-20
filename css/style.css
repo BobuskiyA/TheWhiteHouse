@@ -21,6 +21,10 @@
   align-items: center;
   font-size: 18px;
   color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
 }
 .header__icon{
   height: 60px;
@@ -69,7 +73,9 @@
   width: 100%;
   color: white;
   padding-top: 20px;
-  height: 100vh;
+  position: fixed;
+  z-index: 19;
+  top: 30px;
 }
 .burger-menu__items{
   display: flex;
@@ -90,6 +96,7 @@
 
 /*************************** FIRST PAGE STYLING  *******************************/
 .first__logo{
+  margin-top: 79px;
   width: 47%;
   height: 26%;
   min-width: 300px;
@@ -156,6 +163,19 @@
 }
  .founder__title{}
 
+@media screen and (max-width:1200px) {
+  .founder__body{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    margin-top: 50px;
+  } 
+  .founder__photo{
+    height: 50%;
+    width: 70%;
+  }
+}
 /******************* STYLES PAGE STYLING ************************/
 .styles__sqare1{
   height: 15vw;
@@ -462,7 +482,7 @@
 }
 /************************** CONTACT FORM STYLING ***************************/
 .contact-form{
-  width: 750px;
+  width: 100%;
 }
 .contact-form__form{
   display: flex;
@@ -483,7 +503,7 @@
 }
 .contact-form__fild{
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
 }
@@ -542,11 +562,6 @@
   }
 }
 
-@media screen and (max-width:1024px) {
-  .contact-form{
-   width: 75vw;
-  }
-}
 @media screen and (max-width: 768px) {
   .first__title{
     font-size: 55px;
@@ -579,6 +594,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .first__logo{
+    margin-top: 50px;
+  }
   .first__title{
     font-size: 45px;
   }
@@ -595,9 +613,6 @@
 }
 
 @media screen and (max-width:426px) {
-  .contact-form{
-    width: 100vw;
-  }
   .first__title{
     font-size: 40px;
   }
@@ -621,4 +636,10 @@
    
   }
 
+  .img-reviews__img-chat {
+    left: 0;
+  }
+  .img-reviews__img-chat1 {
+    top: 0;
+  }
 }
