@@ -1,14 +1,16 @@
 <?php
 $url = 'https://api.elasticemail.com/v2/email/send';
-
+if(!$_POST) {echo 'list is empty';}
+$name = $_POST["name"];
+$phone = $_POST["phone"];
 try{
-        $post = array('from' => 'sabovmicha@gmail.com',
-		'fromName' => 'michael',
-		'apikey' => '77FF92C118F841E1A6DD42AFFFC604DC8AAC164708D8D0EAE2A501197F3D7D32E613674585F466C50603CFE1DFC327E8',
-		'subject' => 'Your Subject',
+        $post = array('from' => 'thewhitehouseemailsender@gmail.com',
+		'fromName' => 'TheWhiteHouse',
+		'apikey' => '6474B5D52FFB67CA0333BE356E5B4E153B96B36252139135D775A85B5E6A559EFBE7B3D379A66EA2700AD8066CAA2F46',
+		'subject' => 'Новый клиент хочет связаться с вами',
 		'to' => 'sabovmiha@gmail.com',
-		'bodyHtml' => '<h1>Html Body</h1>',
-		'bodyText' => 'Text Body',
+		'bodyHtml' => '<div>Привет, меня зовут ' . $name . '<br> Мой номер телефона ' .$phone . '<br> Пожалуста свяжитесь со мной</div>',
+		'bodyText' => '',
 		'isTransactional' => false);
 		
 		$ch = curl_init();

@@ -1,21 +1,26 @@
+var FormName, FormEmail, FormPhone, result;
 function sendMail(){
-    name=$('#name').val();
-    email=$('#email').val();
-    phone=$('#phone').val();
-    formValidation(name, email, phone);
-    $.ajax({
-        /****************** CHANGRE AFTER TRANSFER TO THE SERVER ************************/
-    url:"http://localhost/TheWhiteHouse-Fork/scripts/sendEmail.php", 
-    type:'post',
-    dataType:'json',
-    data:{name:name, email:email, phone:phone},
-    success:function(result){
-        $('#success').removeClass("hidden");
-    },
-    error:function(result){
-        $('#internalError').removeClass("hidden");  
+    FormName=$('#name').val();
+    FormEmail=$('#email').val();
+    FormPhone=$('#phone').val();
+    result=formValidation(FormName, FormEmail, FormPhone);
+    
+    if(result){
+        $.ajax({
+        method:'POST',
+        url:"./scripts/sendEmail.php/", 
+        data:$('#contactForm').serialize(),
+        success:function(result){
+            $('#success').removeClass("hidden");
+            $('#internalError').addClass("hidden")
+        },
+        error:function(result){
+            $('#internalError').removeClass("hidden");  
+            $('#success').addClass('hidden');
+            console.log(result.error)
+        }
+    });
     }
-});
 };
 
 function formValidation(name, email, phone){
@@ -23,21 +28,24 @@ function formValidation(name, email, phone){
     var phoneformat = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/ ;
     if(name.length<=2) {
         $('#nameValidationError').removeClass('hidden');
-        return;
+        return false;
     }
     else $('#nameValidationError').addClass('hidden');
     
     if(!email.match(mailformat)) {
         $('#emailValidatoinError').removeClass('hidden');
-        return;
+        return false;
     }
     else $('#emailValidatoinError').addClass('hidden');
 
     if(!phone.match(phoneformat)) {
         $('#phoneValidatonError').removeClass('hidden');
-        return;
+        return false;
     }
-    else $('#phoneValidatonError').addClass('hidden');
+    else {
+        $('#phoneValidatonError').addClass('hidden');
+        return true;
+    }
 }
 
 var visibility = false ;
