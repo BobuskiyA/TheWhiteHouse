@@ -206,6 +206,9 @@
   width: 11.4vw; 
   left: 90%;
 }
+.styles__item{
+  list-style-type: disc;
+}
 
 /******************** YOUR STYLE STYLING *********************/
 
@@ -310,7 +313,7 @@
 }
 .stages__body{
 }
-.styles__item{
+.stages__stage{
   list-style-type: disc;
 }
 /**************************** REVIEWS PAGE STYLING ***********************/
