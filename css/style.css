@@ -208,6 +208,7 @@
 }
 .styles__item{
   list-style-type: disc;
+  margin-left: 20px;
 }
 
 /******************** YOUR STYLE STYLING *********************/
@@ -315,6 +316,11 @@
 }
 .stages__stage{
   list-style-type: disc;
+  margin-left: 25px;
+}
+.stages__header{
+  font-weight: 500;
+  font-size: 1.3em;
 }
 /**************************** REVIEWS PAGE STYLING ***********************/
 .reviews-square{
@@ -417,9 +423,7 @@
   align-items: center;
 }
 .why-us__text{
-  background-color: rgb(22,100,216);
-  color: white;
-  padding: 30px 50px;
+  padding: 30px 20px;
   margin: 30px;
 }
 
@@ -469,7 +473,7 @@
   flex-direction: column;
 }
 .whatsup__icon{
-  height: 55px;
+  height: 53px;
   width: 45px;
   position: relative;
   top: 12px;
@@ -497,7 +501,7 @@
   background-color: rgb(22,100,216);
   color: white;
   text-align: center;
-  padding: 10px 0px;
+  padding: 10px 50px;
 }
 .contact-form__filds{
   display: flex;
@@ -538,10 +542,10 @@
 }
 .contact-form__message-success{
   background-color: rgb(167, 243, 80);
-  color: rgb(43, 97, 1);
+  color: rgb(32, 74, 0);
   border: 2px rgb(43, 97, 1) solid;
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px 20px;
   text-align: center;
 }
 .contact-form__message-error{
@@ -549,7 +553,7 @@
   color: rgb(81, 0, 0);
   border: 2px rgb(81, 0, 0) solid;
   width: 100%;
-  padding: 30px 0px;
+  padding: 30px 20px;
   text-align: center;
 }
 

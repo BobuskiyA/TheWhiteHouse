@@ -1,9 +1,8 @@
-var FormName, FormEmail, FormPhone, result;
+var FormName, FormPhone, result;
 function sendMail(){
     FormName=$('#name').val();
-    FormEmail=$('#email').val();
     FormPhone=$('#phone').val();
-    result=formValidation(FormName, FormEmail, FormPhone);
+    result=formValidation(FormName, FormPhone);
     
     if(result){
         $.ajax({
@@ -23,29 +22,25 @@ function sendMail(){
     }
 };
 
-function formValidation(name, email, phone){
-    var mailformat = /^\w+([\.-]?\w+)*[@gmail.com]*(\.\w{2,3})+$/ ;
+function formValidation(name, phone){
     var phoneformat = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/ ;
     if(name.length<=2) {
         $('#nameValidationError').removeClass('hidden');
+        $('#success').addClass('hidden');
+        $('#internalError').addClass('hidden');
         return false;
     }
     else $('#nameValidationError').addClass('hidden');
-    
-    if(!email.match(mailformat)) {
-        $('#emailValidatoinError').removeClass('hidden');
-        return false;
-    }
-    else $('#emailValidatoinError').addClass('hidden');
 
     if(!phone.match(phoneformat)) {
         $('#phoneValidatonError').removeClass('hidden');
+        $('#success').addClass('hidden');
+        $('#internalError').addClass('hidden');
         return false;
     }
-    else {
-        $('#phoneValidatonError').addClass('hidden');
-        return true;
-    }
+    else $('#phoneValidatonError').addClass('hidden');
+    
+    return true;
 }
 
 var visibility = false ;
