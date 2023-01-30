@@ -8,7 +8,7 @@ try{
 		'fromName' => 'TheWhiteHouse',
 		'apikey' => '6474B5D52FFB67CA0333BE356E5B4E153B96B36252139135D775A85B5E6A559EFBE7B3D379A66EA2700AD8066CAA2F46',
 		'subject' => 'Новый клиент хочет связаться с вами',
-		'to' => 'sabovmiha@gmail.com',
+		'to' => 'bait.halavan@gmail.com',
 		'bodyHtml' => '<div>Привет, меня зовут ' . $name . '<br> Мой номер телефона ' .$phone . '<br> Пожалуста свяжитесь со мной</div>',
 		'bodyText' => '',
 		'isTransactional' => false);
