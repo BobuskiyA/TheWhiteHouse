@@ -37,6 +37,10 @@
   flex-direction: row;
   
 }
+.whatsapp-icon__image{
+  height: 45px;
+  width: 45px;
+}
 
 .menu__item{
 }
