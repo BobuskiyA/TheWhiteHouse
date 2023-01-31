@@ -320,11 +320,12 @@
 }
 .stages__stage{
   list-style-type: disc;
-  margin-left: 25px;
+  margin-left: 30px;
 }
 .stages__header{
   font-weight: 500;
   font-size: 1.3em;
+  padding-bottom: 10px;
 }
 /**************************** REVIEWS PAGE STYLING ***********************/
 .reviews-square{
